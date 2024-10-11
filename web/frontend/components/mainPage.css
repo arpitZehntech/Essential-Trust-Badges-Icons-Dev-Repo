@@ -1,0 +1,91 @@
+/* MainPage.css */
+.cardContainer {
+    text-align: center;
+}
+
+.pageTitle {
+    margin-bottom: 10px;
+}
+
+.emptyStateMargin {
+    padding: 28px 0px 0px;
+}
+
+.Polaris-Page {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    max-width: 62.375rem !important;
+    width: 100% !important;
+    /* Allow full width on smaller screens */
+    overflow-x: hidden !important;
+    /* Prevent horizontal scrolling */
+    border-radius: var(--p-border-radius-2) !important;
+    /* Add border-radius */
+}
+
+.Polaris-Box {
+    border-radius: var(--p-border-radius-2);
+    /* Ensure box has border-radius */
+}
+
+@media (min-width: 10.625em) {
+    .Polaris-Card {
+        border-radius: var(--p-border-radius-2);
+    }
+}
+
+.Polaris-Page__Content {
+    padding-top: 0px !important;
+}
+
+@media (min-width: 30.625em) {
+    .Polaris-Page {
+        padding: 0 var(--p-space-3) !important;
+    }
+}
+
+/* Add a media query for responsiveness */
+@media (max-width: 600px) {
+    .Polaris-Header-Title {
+        font-size: 20px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .Polaris-Text--headingLg {
+        font-size: 1.25rem;
+        /* Adjust heading size */
+    }
+
+    .Polaris-Button {
+        width: 100%;
+        /* Make buttons full width on small screens */
+        margin-top: 1rem;
+        /* Add margin to separate buttons */
+    }
+
+    .emptyStateMargin {
+        padding: 20px;
+        /* Adjust padding for smaller screens */
+    }
+}
+
+.Polaris-Text--subdued {
+    padding: 0px 0px 24px;
+}
+
+.Polaris-Button {
+    padding: 7px 16px;
+}
+
+.heading {
+    margin-bottom: 3px;
+}
+
+
+/* Media query for screens below 489px */
+@media (max-width: 489px) {
+    .mainBox {
+        padding: var(--p-space-4) var(--p-space-4) !important;
+        /* Adjust padding for smaller screens */
+    }
+}

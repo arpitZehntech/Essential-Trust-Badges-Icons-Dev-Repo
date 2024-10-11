@@ -1,0 +1,21 @@
+.back-arrow {
+    fill: rgb(97, 106, 117);
+    /* Initial color */
+    transition: fill 0.3s ease;
+    /* Smooth transition */
+}
+
+.Polaris-Button:hover .back-arrow {
+    fill: rgb(31, 33, 36);
+    /* Color on hover */
+}
+
+.sc-fxwrCY.iQjPCS {
+    overflow: hidden !important;
+    padding: 10px !important;
+    width: 290px !important;
+}
+
+.card-Img {
+    margin-bottom: 20px;
+}
