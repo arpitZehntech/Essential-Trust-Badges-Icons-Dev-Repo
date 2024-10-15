@@ -3,7 +3,7 @@
 client_id = "3c71d8066fd873dfafb10a06b22b8ca0"
 name = "Essential-Trust-badges-icons"
 handle = "essential-trust-badges-icons"
-application_url = "https://indicator-carey-hybrid-emma.trycloudflare.com"
+application_url = "https://console-instruments-anonymous-trash.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://indicator-carey-hybrid-emma.trycloudflare.com/auth/callback",
-  "https://indicator-carey-hybrid-emma.trycloudflare.com/auth/shopify/callback",
-  "https://indicator-carey-hybrid-emma.trycloudflare.com/api/auth/callback"
+  "https://console-instruments-anonymous-trash.trycloudflare.com/auth/callback",
+  "https://console-instruments-anonymous-trash.trycloudflare.com/auth/shopify/callback",
+  "https://console-instruments-anonymous-trash.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

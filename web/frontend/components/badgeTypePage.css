@@ -10,7 +10,7 @@
     /* Color on hover */
 }
 
-.sc-fxwrCY.iQjPCS {
+.card-Cls {
     overflow: hidden !important;
     padding: 10px !important;
     width: 290px !important;
@@ -18,4 +18,23 @@
 
 .card-Img {
     margin-bottom: 20px;
+}
+
+/* Media query for screens below 489px */
+@media (max-width: 489px) {
+    .topBox {
+        padding: var(--p-space-4) var(--p-space-4) !important;
+        /* Adjust padding for smaller screens */
+    }
+}
+
+.topBox
+{
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs
+{
+    padding-right: 20px; 
 }
