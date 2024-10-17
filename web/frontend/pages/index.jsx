@@ -87,6 +87,8 @@ import MainPage from "../components/mainPage"; // Import the MainPage component
 import BadgeTypePage from "../components/BadgeTypePage"; // Import the BadgeTypePage component
 import BadgeEditor from "../components/BadgeEditor"; // Import the BadgeEditor component
 
+
+
 export default function HomePage() {
   const { t } = useTranslation();
   const [showBadgeTypePage, setShowBadgeTypePage] = useState(false);

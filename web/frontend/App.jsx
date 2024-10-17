@@ -30,6 +30,7 @@ export default function App() {
             />
             <Routes pages={pages} />
           </QueryProvider>
+          
         </AppBridgeProvider>
       </BrowserRouter>
     </PolarisProvider>

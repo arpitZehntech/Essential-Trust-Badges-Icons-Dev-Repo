@@ -109,10 +109,10 @@
 
 // export default IconSelector;
 
-// testing code 14/10/2024
+// testing code 14/10/2024 working fine
 
 import React, { useState } from 'react';
-import * as icons from 'react-icons/fa';
+import * as icons from 'react-icons/bi';
 import { Modal, TextField } from '@shopify/polaris';
 import './IconSelector.css'; // Import the CSS file
 
@@ -129,7 +129,7 @@ const IconSelector = ({ active, toggleModal, onIconSelect }) => {
         categories[category] = [];
       }
       categories[category].push({
-        name: key.replace('Fa', ''), // Remove 'Fa' prefix
+        name: key.replace('Bi', ''), // Remove 'Fa' prefix
         icon: React.createElement(icons[key], { size: 40 }), // Icon size
       });
     });
