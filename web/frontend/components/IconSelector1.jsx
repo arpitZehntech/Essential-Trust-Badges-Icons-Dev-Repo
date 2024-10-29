@@ -17,7 +17,7 @@ const IconSelector1 = ({ active, toggleModal, onIconSelect }) => {
       }
       categories[category].push({
         name: key.replace('Fc', ''), // Remove 'Fa' prefix
-        icon: React.createElement(icons[key], { size: 40 }), // Icon size
+        icon: React.createElement(icons[key], { size: 32 }), // Icon size
       });
     });
 

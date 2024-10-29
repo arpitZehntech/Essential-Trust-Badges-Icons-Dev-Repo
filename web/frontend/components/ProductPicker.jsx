@@ -1,4 +1,5 @@
-// // ProductPicker.js
+// this code is working foe like any button and the Product both requried
+
 // import React, { useState, useCallback } from 'react';
 // import { ResourcePicker } from '@shopify/app-bridge-react';
 // import { Button, Modal, TextContainer } from '@shopify/polaris';
@@ -52,9 +53,10 @@
 
 // export default ProductPicker;
 
-// Working code for direct call the page and use in any page 
 
-// ProductPicker.js
+
+// Working code Testing on Saturday ,  19/10/2024 
+
 import React, { useState, useCallback } from 'react';
 import { ResourcePicker } from '@shopify/app-bridge-react';
 import { Modal, TextContainer } from '@shopify/polaris';
@@ -80,25 +82,6 @@ function ProductPicker({ onSelectProduct, isOpen, onClose }) {
         showVariants={false} // If you don't want to show variants
        
       />
-
-      {/* {selectedProduct && (
-        <Modal
-          open={true}
-          onClose={onClose}
-          title="Selected Product"
-        >
-          <Modal.Section>
-            <TextContainer>
-              <img
-                src={selectedProduct.images[0]?.originalSrc}
-                alt={selectedProduct.title}
-                width="50"
-              />
-              <p>{selectedProduct.title}</p>
-            </TextContainer>
-          </Modal.Section>
-        </Modal>
-      )} */}
     </>
   );
 }

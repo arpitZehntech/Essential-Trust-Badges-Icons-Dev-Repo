@@ -1,11 +1,4 @@
 /* MainPage.css */
-.cardContainer {
-    text-align: center;
-}
-
-.pageTitle {
-    margin-bottom: 10px;
-}
 
 .emptyStateMargin {
     padding: 28px 0px 0px;
@@ -21,11 +14,6 @@
     /* Prevent horizontal scrolling */
     border-radius: var(--p-border-radius-2) !important;
     /* Add border-radius */
-}
-
-.Polaris-Box {
-    border-radius: var(--p-border-radius-2);
-    /* Ensure box has border-radius */
 }
 
 @media (min-width: 10.625em) {
@@ -46,26 +34,8 @@
 
 /* Add a media query for responsiveness */
 @media (max-width: 600px) {
-    .Polaris-Header-Title {
-        font-size: 20px;
-        /* Adjust font size for smaller screens */
-    }
-
-    .Polaris-Text--headingLg {
-        font-size: 1.25rem;
-        /* Adjust heading size */
-    }
-
-    .Polaris-Button {
-        width: 100%;
-        /* Make buttons full width on small screens */
-        margin-top: 1rem;
-        /* Add margin to separate buttons */
-    }
-
-    .emptyStateMargin {
-        padding: 20px;
-        /* Adjust padding for smaller screens */
+    .Polaris-Text--subdued {
+        padding-top: 4px !important;
     }
 }
 
@@ -78,14 +48,53 @@
 }
 
 .heading {
-    margin-bottom: 3px;
+    margin-bottom: 3px !important;
 }
 
 
-/* Media query for screens below 489px */
-@media (max-width: 489px) {
-    .mainBox {
-        padding: var(--p-space-4) var(--p-space-4) !important;
-        /* Adjust padding for smaller screens */
-    }
+/* css for data table for result from database*/
+
+.left-header,
+.right-header {
+  font-weight: 600;
+  padding: 16px 20px;
+}
+
+.left-header {
+  text-align: left;
+}
+
+.right-header {
+  text-align: right;
+}
+
+.body-row {
+  border-top: 1px solid #e1e3e5;
+}
+
+.left-data,
+.right-data {
+  padding: 16px 20px;
+  border-top: 1px solid #e1e3e5;
+}
+
+.left-data {
+  text-align: left;
+}
+
+.right-data {
+  text-align: right;
+}
+
+.custom-row {
+  display: flex;
+  align-items: center;
+}
+
+.drag-icon {
+  margin-right: 8px;
+}
+.title1
+{
+  margin-left: 8px;
 }

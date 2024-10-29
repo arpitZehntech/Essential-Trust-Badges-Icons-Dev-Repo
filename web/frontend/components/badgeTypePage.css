@@ -2,7 +2,6 @@
     fill: rgb(97, 106, 117);
     /* Initial color */
     transition: fill 0.3s ease;
-    /* Smooth transition */
 }
 
 .Polaris-Button:hover .back-arrow {
@@ -10,25 +9,23 @@
     /* Color on hover */
 }
 
-.card-Cls {
+.cardContainer  {
     overflow: hidden !important;
     padding: 10px !important;
     width: 290px !important;
 }
 
-.card-Img {
+.cardImage  {
     margin-bottom: 20px;
 }
 
 /* Media query for screens below 489px */
 @media (max-width: 489px) {
-    .topBox {
+    .flexContainer  {
         padding: var(--p-space-4) var(--p-space-4) !important;
-        /* Adjust padding for smaller screens */
     }
 }
-
-.topBox
+.flexContainer 
 {
     display: flex;
     align-items: center;
@@ -36,5 +33,5 @@
 
 .breadcrumbs
 {
-    padding-right: 20px; 
+    padding-right: 10px; 
 }

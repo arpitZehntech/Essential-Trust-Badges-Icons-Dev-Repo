@@ -1,3 +1,5 @@
+// this code is working foe like any buuton and the collection both requried
+
 // import React, { useState, useCallback } from 'react';
 // import { ResourcePicker } from '@shopify/app-bridge-react';
 // import { Button, Modal, TextContainer } from '@shopify/polaris';
@@ -32,8 +34,8 @@
 
 
 
-// Working code for direct call the page and use in any page 
-// CollectionPicker.js
+// Working code Testing on Saturday ,  19/10/2024 
+
 import React, { useState, useCallback } from 'react';
 import { ResourcePicker } from '@shopify/app-bridge-react';
 

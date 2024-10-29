@@ -371,7 +371,7 @@ function SingleBanner({
           </div>
         </div>
       )}
-      <div className="translations-section">
+      {/* <div className="translations-section">
         <Stack>
           <Stack.Item>
             <span className="Polaris-TextStyle--variationStrong">Translations</span>
@@ -385,7 +385,7 @@ function SingleBanner({
       </div>
       <Button fullWidth onClick={() => { }}>
         Add translation
-      </Button>
+      </Button> */}
     </div>
   );
 }

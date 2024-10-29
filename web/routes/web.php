@@ -17,8 +17,10 @@ use Shopify\Context;
 use Shopify\Exception\InvalidWebhookException;
 use Shopify\Utils;
 use Shopify\Webhooks\Registry;
+use App\Http\Controllers\ProductListController;
 use Shopify\Webhooks\Topics;
 
+use App\Http\Controllers\BadgeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -143,3 +145,10 @@ Route::post('/api/webhooks', function (Request $request) {
         return response()->json(['message' => "Got an exception when handling '$topic' webhook"], 500);
     }
 });
+
+Route::get('/api/productslist', [ProductListController::class, 'getProducts'])->middleware('shopify.auth');
+
+
+
+Route::get('/badges', [BadgeController::class, 'index']);
+
