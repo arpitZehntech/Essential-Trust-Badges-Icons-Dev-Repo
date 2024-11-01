@@ -3,7 +3,7 @@
 client_id = "3c71d8066fd873dfafb10a06b22b8ca0"
 name = "Essential-Trust-badges-icons"
 handle = "essential-trust-badges-icons"
-application_url = "https://consumption-minus-kai-condo.trycloudflare.com"
+application_url = "https://updates-concord-reaching-nov.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://consumption-minus-kai-condo.trycloudflare.com/auth/callback",
-  "https://consumption-minus-kai-condo.trycloudflare.com/auth/shopify/callback",
-  "https://consumption-minus-kai-condo.trycloudflare.com/api/auth/callback"
+  "https://updates-concord-reaching-nov.trycloudflare.com/auth/callback",
+  "https://updates-concord-reaching-nov.trycloudflare.com/auth/shopify/callback",
+  "https://updates-concord-reaching-nov.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

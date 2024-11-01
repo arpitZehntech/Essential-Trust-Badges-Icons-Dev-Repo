@@ -25,6 +25,9 @@ class CreateBadgePagesTable extends Migration
             $table->unsignedBigInteger('collection_id')->nullable(); // Optional collection ID
             $table->string('external_url')->nullable(); // External URL
             $table->enum('status', ['Draft', 'Publish'])->default('Draft'); // Status
+            $table->json('product_json')->nullable(); // Icon for the page
+            $table->json('collection_json')->nullable(); // Icon for the page
+
             $table->timestamps(); // created_at and updated_at timestamps
         });
     }

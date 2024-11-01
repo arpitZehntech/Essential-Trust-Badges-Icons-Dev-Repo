@@ -18,7 +18,9 @@ class BadgePage extends Model
         'call_to_action',
         'button_text',
         'product_id',
+        'product_json',
         'collection_id',
+        'collection_json',
         'external_url',
     ];
     

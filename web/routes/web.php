@@ -146,9 +146,8 @@ Route::post('/api/webhooks', function (Request $request) {
     }
 });
 
+
 Route::get('/api/productslist', [ProductListController::class, 'getProducts'])->middleware('shopify.auth');
-
-
 
 Route::get('/badges', [BadgeController::class, 'index']);
 

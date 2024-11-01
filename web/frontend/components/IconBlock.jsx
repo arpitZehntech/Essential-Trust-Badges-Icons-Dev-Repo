@@ -444,6 +444,7 @@ import ProductPicker from './ProductPicker';
 import CollectionPicker from './CollectionPicker';
 // import './BadgeEditor.css';
 import './IconBlock.css';
+import * as icons from 'react-icons/lia';
 
 function IconBlock({
   title,
@@ -474,7 +475,7 @@ function IconBlock({
   onRemove,
   pageIndex,
   iconBlockPages,
-  addIconBlockPage 
+  addIconBlockPage
 }) {
   const removeIcon = () => {
     setSelectedIcon(null);
@@ -484,6 +485,16 @@ function IconBlock({
     setSelectedIcon(icon);
     setIconModalActive(false);
   };
+  const getIconComponent = (iconName) => {
+    try {
+      return icons[iconName];
+    } catch (error) {
+      console.error(`Error importing icon ${iconName}:`, error);
+      return null; // Default return null if the icon is not found
+    }
+  };
+
+  const IconComponent = selectedIcon ? getIconComponent(selectedIcon.name) : null;
 
   return (
     <div>
@@ -515,7 +526,7 @@ function IconBlock({
           <LegacyStack.Item>
             <LegacyStack spacing="baseTight" distribution="leading">
               <LegacyStack.Item>
-                <div className={`icon-preview ${selectedIcon ? 'selected' : ''}`} onClick={toggleIconModal}
+                {/* <div className={`icon-preview ${selectedIcon ? 'selected' : ''}`} onClick={toggleIconModal}
                   style={{ cursor: 'pointer' }}>
                   {selectedIcon ? (
                     <span className="Polaris-Thumbnail Polaris-Thumbnail--sizeLarge">
@@ -531,6 +542,38 @@ function IconBlock({
                         </path>
                       </svg>
                     </span>
+                  )}
+                </div> */}
+
+                <div
+                  className={`icon-preview ${selectedIcon ? 'selected' : ''}`}
+                  onClick={toggleIconModal}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {IconComponent ? (
+                    <span className="Polaris-Thumbnail Polaris-Thumbnail--sizeLarge">
+                      <IconComponent size={32} />
+                    </span>
+                  ) : (
+                    !selectedIcon ? (
+                      <span className="Polaris-Icon Polaris-Icon--colorSubdued Polaris-Icon--applyColor">
+                        <span className="Polaris-Text--root Polaris-Text--visuallyHidden"></span>
+                        <svg
+                          viewBox="0 0 20 20"
+                          className="Polaris-Icon__Svg"
+                          focusable="false"
+                          aria-hidden="true"
+                        >
+                          <path d="M19 2.5a1.5 1.5 0 0 0-1.5-1.5h-15a1.5 1.5 0 0 0-1.5 1.5v15a1.5 1.5 0 0 0 1.5 1.5h7.5v-2h-6.503c-.41 0-.64-.46-.4-.79l3.553-4.051c.19-.21.52-.21.72-.01l1.63 1.851 3.06-4.781a.5.5 0 0 1 .84.02l.72 1.251a5.98 5.98 0 0 1 2.38-.49h3v-7.5zm-11.5 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm12.207 10.793a1 1 0 0 0-.707-.293h-2v-2a1 1 0 0 0-2 0v2h-2a1 1 0 0 0 0 2h2v2a1 1 0 1 0 2 0v-2h2a1 1 0 0 0 .707-1.707z"></path>
+                        </svg>
+                      </span>
+                    ) : (
+                      selectedIcon && (
+                        <span className="Polaris-Thumbnail Polaris-Thumbnail--sizeLarge">
+                          {selectedIcon.icon}
+                        </span>
+                      )
+                    )
                   )}
                 </div>
               </LegacyStack.Item>
@@ -583,19 +626,27 @@ function IconBlock({
             )}
             <div className="Polaris-FormLayout__Item">
               <fieldset className="Polaris-VerticalStack Polaris-VerticalStack--fieldsetReset"
-                aria-invalid="false" style={{ "--pc-vertical-stack-order": "column"
-                  , "--pc-vertical-stack-gap-xs": "var(--p-space-4)" , "--pc-vertical-stack-gap-md"
-                  : "var(--p-space-0)" }}>
-                <legend className="Polaris-Box" style={{ "--pc-box-padding-block-end-xs": "var(--p-space-5)"
-                  , "--pc-box-padding-block-end-md": "var(--p-space-1)" }}>
+                aria-invalid="false" style={{
+                  "--pc-vertical-stack-order": "column"
+                  , "--pc-vertical-stack-gap-xs": "var(--p-space-4)", "--pc-vertical-stack-gap-md"
+                    : "var(--p-space-0)"
+                }}>
+                <legend className="Polaris-Box" style={{
+                  "--pc-box-padding-block-end-xs": "var(--p-space-5)"
+                  , "--pc-box-padding-block-end-md": "var(--p-space-1)"
+                }}>
                   Link to
                 </legend>
                 <ul className="Polaris-VerticalStack Polaris-VerticalStack--listReset"
-                  style={{ "--pc-vertical-stack-order": "column" , "--pc-vertical-stack-gap-xs"
-                  : "var(--p-space-4)" , "--pc-vertical-stack-gap-md" : "var(--p-space-0)" }}>
+                  style={{
+                    "--pc-vertical-stack-order": "column", "--pc-vertical-stack-gap-xs"
+                      : "var(--p-space-4)", "--pc-vertical-stack-gap-md": "var(--p-space-0)"
+                  }}>
                   <li>
-                    <div className="Polaris-Bleed" style={{ "--pc-bleed-margin-block-end-xs"
-                      : "var(--p-space-0)" }}>
+                    <div className="Polaris-Bleed" style={{
+                      "--pc-bleed-margin-block-end-xs"
+                        : "var(--p-space-0)"
+                    }}>
                       <label className="Polaris-Choice" htmlFor="PolarisRadioButton50">
                         <span className="Polaris-Choice__Control">
                           <span className="Polaris-RadioButton">
@@ -614,8 +665,10 @@ function IconBlock({
                     </div>
                   </li>
                   <li>
-                    <div className="Polaris-Bleed" style={{ "--pc-bleed-margin-block-end-xs"
-                      : "var(--p-space-0)" }}>
+                    <div className="Polaris-Bleed" style={{
+                      "--pc-bleed-margin-block-end-xs"
+                        : "var(--p-space-0)"
+                    }}>
                       <label className="Polaris-Choice" htmlFor="PolarisRadioButton51">
                         <span className="Polaris-Choice__Control">
                           <span className="Polaris-RadioButton">
@@ -634,8 +687,10 @@ function IconBlock({
                     </div>
                   </li>
                   <li>
-                    <div className="Polaris-Bleed" style={{ "--pc-bleed-margin-block-end-xs"
-                      : "var(--p-space-0)" }}>
+                    <div className="Polaris-Bleed" style={{
+                      "--pc-bleed-margin-block-end-xs"
+                        : "var(--p-space-0)"
+                    }}>
                       <label className="Polaris-Choice" htmlFor="PolarisRadioButton52">
                         <span className="Polaris-Choice__Control">
                           <span className="Polaris-RadioButton">
